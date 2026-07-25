@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Grade 8 integrated science year plan and materials, Clovis USD 2026-27.">
+<title>Grade 8 Science — Year Plan 2026-27</title>
+</head>
+<body>
+<style>
+  :root{
+    --bg:#F5F7F9; --surface:#FFFFFF; --surface-2:#EEF1F5;
+    --ink:#1B2430; --ink-soft:#3A4657; --muted:#5C6672; --faint:#8A94A2;
+    --border:#E1E6EC; --border-strong:#CDD5DF;
+    --accent:#0E7C86; --accent-ink:#0A5C63; --accent-wash:#E4F1F2;
+    --s1:#3B6FB0; --s2:#5B57B3; --s3:#3E8E5A; --s4:#0E8C93;
+    --warn:#9A6B12; --warn-wash:#F6ECD6; --crit:#B4463B; --crit-wash:#F6E2df;
+    --good:#3E8E5A; --off:#8A94A2; --off-wash:#EBEEF2;
+    --shadow:0 1px 2px rgba(19,28,40,.05), 0 4px 16px rgba(19,28,40,.05);
+    --font-display:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --font-ui:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --font-mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
+    --maxw:1120px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#0F1520; --surface:#161E2B; --surface-2:#1C2636;
+      --ink:#E8EDF4; --ink-soft:#C4CDD9; --muted:#93A0B0; --faint:#6C7889;
+      --border:#26303F; --border-strong:#33404F;
+      --accent:#37B0B8; --accent-ink:#7FD3D8; --accent-wash:#123138;
+      --s1:#5C8FD6; --s2:#8B86E6; --s3:#5DB37C; --s4:#2FB3BB;
+      --warn:#D6A845; --warn-wash:#332B17; --crit:#E0796E; --crit-wash:#361F1C;
+      --good:#5DB37C; --off:#6C7889; --off-wash:#1B2430;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.3);
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#F5F7F9; --surface:#FFFFFF; --surface-2:#EEF1F5;
+    --ink:#1B2430; --ink-soft:#3A4657; --muted:#5C6672; --faint:#8A94A2;
+    --border:#E1E6EC; --border-strong:#CDD5DF;
+    --accent:#0E7C86; --accent-ink:#0A5C63; --accent-wash:#E4F1F2;
+    --s1:#3B6FB0; --s2:#5B57B3; --s3:#3E8E5A; --s4:#0E8C93;
+    --warn:#9A6B12; --warn-wash:#F6ECD6; --crit:#B4463B; --crit-wash:#F6E2df;
+    --good:#3E8E5A; --off:#8A94A2; --off-wash:#EBEEF2;
+    --shadow:0 1px 2px rgba(19,28,40,.05), 0 4px 16px rgba(19,28,40,.05);
+  }
+  :root[data-theme="dark"]{
+    --bg:#0F1520; --surface:#161E2B; --surface-2:#1C2636;
+    --ink:#E8EDF4; --ink-soft:#C4CDD9; --muted:#93A0B0; --faint:#6C7889;
+    --border:#26303F; --border-strong:#33404F;
+    --accent:#37B0B8; --accent-ink:#7FD3D8; --accent-wash:#123138;
+    --s1:#5C8FD6; --s2:#8B86E6; --s3:#5DB37C; --s4:#2FB3BB;
+    --warn:#D6A845; --warn-wash:#332B17; --crit:#E0796E; --crit-wash:#361F1C;
+    --good:#5DB37C; --off:#6C7889; --off-wash:#1B2430;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.3);
+  }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-ui);
+    font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;}
+  a{color:var(--accent-ink);text-decoration:none}
+  a:hover{text-decoration:underline}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  /* Masthead */
+  header.mast{border-bottom:1px solid var(--border);background:
+    linear-gradient(180deg,var(--surface),var(--bg));}
+  .mast-in{max-width:var(--maxw);margin:0 auto;padding:30px 24px 22px;
+    display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+  .eyebrow{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);
+    font-weight:600;margin:0 0 6px}
+  h1{font-family:var(--font-display);font-weight:600;font-size:2.15rem;line-height:1.05;
+    margin:0;letter-spacing:-.01em;text-wrap:balance}
+  .sub{color:var(--muted);margin:8px 0 0;max-width:60ch}
+  .theme-btn{font-family:var(--font-ui);font-size:.8rem;color:var(--ink-soft);background:var(--surface);
+    border:1px solid var(--border-strong);border-radius:999px;padding:7px 14px;cursor:pointer;
+    display:inline-flex;gap:7px;align-items:center;white-space:nowrap}
+  .theme-btn:hover{border-color:var(--accent)}
+
+  /* Sticky nav */
+  nav.jump{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--surface) 88%,transparent);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+  .jump-in{max-width:var(--maxw);margin:0 auto;padding:9px 24px;display:flex;gap:6px;flex-wrap:wrap;
+    align-items:center}
+  .jump a{font-size:.82rem;color:var(--ink-soft);padding:5px 11px;border-radius:999px;
+    border:1px solid transparent;display:inline-flex;gap:7px;align-items:center}
+  .jump a:hover{background:var(--surface-2);text-decoration:none}
+  .dot{width:9px;height:9px;border-radius:3px;display:inline-block;flex:0 0 auto}
+
+  main{padding:30px 0 60px}
+  section{margin:0 0 12px;scroll-margin-top:58px}
+  .lead{color:var(--ink-soft);max-width:70ch;margin:2px 0 22px}
+
+  /* Overview grid */
+  .grid{display:grid;gap:16px}
+  .seg-grid{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-bottom:14px}
+  .segcard{background:var(--surface);border:1px solid var(--border);border-radius:12px;
+    padding:16px 16px 15px;box-shadow:var(--shadow);border-top:3px solid var(--sc);position:relative}
+  .segcard .num{font-family:var(--font-mono);font-size:.72rem;color:var(--sc);font-weight:600}
+  .segcard h3{font-family:var(--font-display);font-size:1.12rem;margin:3px 0 2px;font-weight:600;line-height:1.15}
+  .segcard .dates{font-family:var(--font-mono);font-size:.78rem;color:var(--muted);margin-bottom:9px}
+  .segcard .dq{font-size:.86rem;color:var(--ink-soft);margin:0}
+  .segcard .doms{display:flex;gap:5px;flex-wrap:wrap;margin-top:11px}
+
+  /* Aside panels */
+  .panels{display:grid;grid-template-columns:1.1fr 1fr;gap:16px;margin-bottom:26px}
+  .panel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow)}
+  .panel h3{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+    margin:0 0 12px;font-weight:700}
+  .kv{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px dashed var(--border);
+    font-size:.88rem}
+  .kv:last-child{border-bottom:0}
+  .kv b{font-weight:600;color:var(--ink)}
+  .kv .v{font-family:var(--font-mono);color:var(--ink-soft);text-align:right;font-size:.82rem}
+  .sched-line{display:flex;gap:10px;align-items:baseline;padding:5px 0;font-size:.88rem}
+  .sched-line .day{font-family:var(--font-mono);font-size:.76rem;color:var(--accent-ink);
+    min-width:104px;font-weight:600}
+
+  /* Segment sections */
+  .seg-h{display:flex;align-items:center;gap:12px;margin:34px 0 4px;padding-top:8px}
+  .seg-h .bar{width:5px;height:34px;border-radius:3px;background:var(--sc)}
+  .seg-h h2{font-family:var(--font-display);font-size:1.5rem;margin:0;font-weight:600;letter-spacing:-.01em}
+  .seg-meta{font-family:var(--font-mono);font-size:.78rem;color:var(--muted);margin:0 0 2px 17px}
+  .seg-mission{font-size:.9rem;color:var(--ink-soft);margin:8px 0 16px 17px;max-width:78ch}
+  .seg-mission b{color:var(--sc)}
+
+  /* Schedule table */
+  .twrap{overflow-x:auto;border:1px solid var(--border);border-radius:12px;background:var(--surface);
+    box-shadow:var(--shadow);margin-bottom:18px}
+  table{border-collapse:collapse;width:100%;min-width:620px;font-size:.88rem}
+  thead th{text-align:left;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+    font-weight:700;padding:11px 14px;border-bottom:1px solid var(--border-strong);background:var(--surface-2)}
+  tbody td{padding:11px 14px;border-bottom:1px solid var(--border);vertical-align:top}
+  tbody tr:last-child td{border-bottom:0}
+  tbody tr:hover td{background:var(--surface-2)}
+  td.wk{white-space:nowrap;font-family:var(--font-mono);font-size:.78rem;color:var(--ink-soft);font-weight:600}
+  td.block{color:var(--ink-soft)}
+  .block b{color:var(--sc);font-weight:600}
+  .off-row td{background:var(--off-wash)!important;color:var(--muted)}
+  .off-row .wk{color:var(--muted)}
+
+  /* Scope link cards */
+  .scopes{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:12px;margin-bottom:8px}
+  .scope{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:13px 14px;
+    display:flex;flex-direction:column;gap:8px}
+  .scope .top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+  .scope h4{font-size:.95rem;margin:0;font-weight:600;line-height:1.25}
+  .pe{font-family:var(--font-mono);font-size:.72rem;color:#fff;background:var(--sc);padding:2px 7px;
+    border-radius:5px;white-space:nowrap;font-weight:500}
+  .scope .links{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+  .lk{font-size:.78rem;display:inline-flex;align-items:center;gap:5px;padding:5px 9px;border-radius:7px;
+    border:1px solid var(--border-strong);color:var(--ink-soft);background:var(--surface-2)}
+  .lk:hover{border-color:var(--accent);color:var(--accent-ink);text-decoration:none}
+  .lk svg{width:12px;height:12px;flex:0 0 auto}
+
+  /* Chips */
+  .chip{font-size:.68rem;letter-spacing:.04em;text-transform:uppercase;font-weight:700;padding:2px 8px;
+    border-radius:999px;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+  .chip.dom{background:var(--surface-2);color:var(--ink-soft);border:1px solid var(--border-strong);
+    text-transform:none;font-weight:600;letter-spacing:0;font-size:.72rem}
+  .chip.warn{background:var(--warn-wash);color:var(--warn)}
+  .chip.crit{background:var(--crit-wash);color:var(--crit)}
+  .chip.info{background:var(--accent-wash);color:var(--accent-ink)}
+  .chip.mini{font-size:.64rem;padding:1px 7px}
+
+  /* Spring / callouts */
+  .callout{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--warn);
+    border-radius:10px;padding:12px 15px;margin:14px 0;font-size:.88rem;color:var(--ink-soft)}
+  .callout b{color:var(--ink)}
+  ul.flags{margin:6px 0 0;padding-left:18px}
+  ul.flags li{margin:4px 0;font-size:.88rem;color:var(--ink-soft)}
+
+  footer{border-top:1px solid var(--border);margin-top:40px;padding:22px 0 50px}
+  footer .wrap{color:var(--muted);font-size:.82rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  h2.sec{font-family:var(--font-display);font-size:1.32rem;margin:0 0 3px;font-weight:600}
+  @media (max-width:720px){
+    .panels{grid-template-columns:1fr}
+    h1{font-size:1.8rem}
+    .mast-in{padding-top:22px}
+  }
+  @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+  html{scroll-behavior:smooth}
+</style>
+
+<header class="mast">
+  <div class="mast-in">
+    <div>
+      <p class="eyebrow">Clovis USD · Grade 8 Integrated Science · CA NGSS</p>
+      <h1>Year Plan &amp; Materials — 2026&#8288;–&#8288;27</h1>
+      <p class="sub">Teacher dashboard: the whole year at a glance — segments, weekly schedule, and every scope linked straight to its materials in Drive.</p>
+    </div>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle light or dark theme">
+      <span id="themeIcon">◐</span> <span id="themeLabel">Theme</span>
+    </button>
+  </div>
+</header>
+
+<nav class="jump" aria-label="Jump to segment">
+  <div class="jump-in">
+    <a href="#glance"><span class="dot" style="background:var(--accent)"></span>Overview</a>
+    <a href="#seg1"><span class="dot" style="background:var(--s1)"></span>1 · Forces &amp; Energy</a>
+    <a href="#seg2"><span class="dot" style="background:var(--s2)"></span>2 · Noncontact Forces</a>
+    <a href="#seg3"><span class="dot" style="background:var(--s3)"></span>3 · Evolution &amp; Heredity</a>
+    <a href="#seg4"><span class="dot" style="background:var(--s4)"></span>4 · Waves</a>
+    <a href="#spring"><span class="dot" style="background:var(--warn)"></span>Spring · CAST · EOY</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- OVERVIEW -->
+  <section id="glance">
+    <p class="lead">First day <b>Aug 17, 2026</b> · Last day <b>Jun 4, 2027</b>. Four segments, taught in order. Reading cluster = the Stemscopedia (New Testing) assignment for a scope; labs/Gizmos live on the weekly block day.</p>
+
+    <div class="grid seg-grid">
+      <a class="segcard" style="--sc:var(--s1)" href="#seg1">
+        <div class="num">SEGMENT 1</div>
+        <h3>Objects Move &amp; Collide</h3>
+        <div class="dates">Aug 24 – Oct 2 · ~6 wk</div>
+        <p class="dq">How do unbalanced forces cause sports injury?</p>
+        <div class="doms"><span class="chip dom">Forces</span><span class="chip dom">Energy</span></div>
+      </a>
+      <a class="segcard" style="--sc:var(--s2)" href="#seg2">
+        <div class="num">SEGMENT 2</div>
+        <h3>Noncontact Forces</h3>
+        <div class="dates">Oct 5 – Nov 13 · ~5.5 wk</div>
+        <p class="dq">How can an object move another without touching it?</p>
+        <div class="doms"><span class="chip dom">Gravity</span><span class="chip dom">Space</span><span class="chip dom">E&amp;M</span></div>
+      </a>
+      <a class="segcard" style="--sc:var(--s3)" href="#seg3">
+        <div class="num">SEGMENT 3</div>
+        <h3>Evolution &amp; Heredity</h3>
+        <div class="dates">Nov 16 – Feb 5 · ~7.5 wk</div>
+        <p class="dq">How do Earth's history &amp; evolution explain diversity?</p>
+        <div class="doms"><span class="chip dom">Evolution</span><span class="chip dom">Genetics</span></div>
+      </a>
+      <a class="segcard" style="--sc:var(--s4)" href="#seg4">
+        <div class="num">SEGMENT 4</div>
+        <h3>Sustaining Diversity — Waves</h3>
+        <div class="dates">Feb 9 – Apr 9 · ~6 wk</div>
+        <p class="dq">How can interpreting waves measure biodiversity?</p>
+        <div class="doms"><span class="chip dom">Waves</span><span class="chip dom">Light</span><span class="chip dom">Signals</span></div>
+      </a>
+    </div>
+
+    <div class="panels">
+      <div class="panel">
+        <h3>Bell schedule — 45-min base</h3>
+        <div class="sched-line"><span class="day">Mon · Tue · Fri</span><span>Regular days — all periods meet ~45 min.</span></div>
+        <div class="sched-line"><span class="day">Wed (block)</span><span>Periods <b>2 · 4 · 6</b> only, ~90 min.</span></div>
+        <div class="sched-line"><span class="day">Thu (block)</span><span>Periods <b>1 · 3 · 7</b> only, ~90 min. (P5 = lunch daily.)</span></div>
+        <div class="sched-line" style="border-top:1px dashed var(--border);margin-top:6px;padding-top:9px">
+          <span class="day">Principle</span><span>Labs / Gizmos / PhET on the weekly block; reading cluster + CER on the 45-min days.</span></div>
+      </div>
+      <div class="panel">
+        <h3>Key dates</h3>
+        <div class="kv"><b>Progress reports</b><span class="v">Sep 25 · Nov 6</span></div>
+        <div class="kv"><b>Semester 1 ends</b><span class="v">Dec 18</span></div>
+        <div class="kv"><b>Reports (S2)</b><span class="v">Feb 19 · Apr 16</span></div>
+        <div class="kv"><b>CAST window</b><span class="v">~May 10–21 · tentative</span></div>
+        <div class="kv"><b>Breaks</b><span class="v">Thx 11/23 · Win 12/21 · Spr 3/19</span></div>
+        <div class="kv"><b>Last day</b><span class="v">Jun 4</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEGMENT 1 -->
+  <section id="seg1" style="--sc:var(--s1)">
+    <div class="seg-h"><span class="bar"></span><h2>Segment 1 · Forces &amp; Energy</h2></div>
+    <p class="seg-meta">Aug 24 – Oct 2 · MS-PS2 · MS-PS3 · MS-ETS1</p>
+    <p class="seg-mission"><b>Driving question:</b> How do unbalanced forces cause sports injury? · <b>Mission:</b> diagram forces in sports injuries + design a rehab / prevention device.</p>
+
+    <div class="twrap"><table>
+      <thead><tr><th>Week</th><th>45-min days (M/Tu/F)</th><th>Block lab</th></tr></thead>
+      <tbody>
+        <tr><td class="wk">Aug 24</td><td><b>Changes in Force &amp; Motion</b> — Hook "Newton Knew Mass Matters" + APK · reading cluster C1 · Force Diagrams practice</td><td class="block">PhET Force &amp; Motion Basics</td></tr>
+        <tr><td class="wk">Aug 31</td><td>reading cluster C2–C3 + analysis Qs · Math Connections · <b>CER (bowling ball)</b></td><td class="block">Free Fall Tower Gizmo</td></tr>
+        <tr><td class="wk">Sep 7 · Labor Day</td><td><b>Newton's Third Law</b> — Hook "What is a system?" + APK · reading cluster C1</td><td class="block">Measuring Forces / contact-force stations</td></tr>
+        <tr><td class="wk">Sep 14</td><td>reading cluster C2–C3 + analysis Qs · Reading Science A (roller coasters)</td><td class="block">Crumple Zones Gizmo <span class="chip mini info">ETS</span></td></tr>
+        <tr><td class="wk">Sep 21</td><td>Math Connections · <b>CER (volleyball)</b> · start Kinetic &amp; Potential Energy — APK</td><td class="block">PhET Energy Skate Park</td></tr>
+        <tr><td class="wk">Sep 28</td><td>KE + PE reading clusters + Qs · Linking Lit · <b>CER Rollercoaster + Pinball</b></td><td class="block">Rollercoaster Energy Lab</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="scopes">
+      <div class="scope" style="--sc:var(--s1)">
+        <div class="top"><h4>Changes in Force &amp; Motion</h4><span class="pe">MS-PS2-2</span></div>
+        <div class="links">
+          <a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1Si1a8XxcoRPqkmiozjqRgXQxVp5iGBkEZ1NBQ6lP4LE/edit">Reading cluster</a>
+          <a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1uoi0tgdscKx6fQtNXUYWGR23pMqyPr08">Materials</a>
+        </div>
+      </div>
+      <div class="scope" style="--sc:var(--s1)">
+        <div class="top"><h4>Newton's Third Law</h4><span class="pe">MS-PS2-1</span></div>
+        <div class="links">
+          <a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1hOdADaZ76XkxXnBqZiSr8PQuZmlvGpU4D4bIcYlNaKc/edit">Reading cluster</a>
+          <a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/14Qbjc67LHxmB8YIHe47T6lQCHuQxVcvt">Materials</a>
+        </div>
+      </div>
+      <div class="scope" style="--sc:var(--s1)">
+        <div class="top"><h4>Kinetic Energy</h4><span class="pe">MS-PS3-1</span></div>
+        <div class="links">
+          <a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1oboc-8MhShz3QqtVQGfSnZJFxreoGSxZMsnNfX3cJfI/edit">Reading cluster</a>
+          <a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1E-bFci-j3X-nlYlQS0IWxsz5UihNwsRU">Materials</a>
+        </div>
+      </div>
+      <div class="scope" style="--sc:var(--s1)">
+        <div class="top"><h4>Potential Energy</h4><span class="pe">MS-PS3-2</span></div>
+        <div class="links">
+          <a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1wm73uHbppQeRymXDKUsPlu16Qww-7dMsp7ZyMb3nMZc/edit">Reading cluster</a>
+          <a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1E-bFci-j3X-nlYlQS0IWxsz5UihNwsRU">Materials</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEGMENT 2 -->
+  <section id="seg2" style="--sc:var(--s2)">
+    <div class="seg-h"><span class="bar"></span><h2>Segment 2 · Noncontact Forces</h2></div>
+    <p class="seg-meta">Oct 5 – Nov 13 · MS-PS2 · MS-ESS1</p>
+    <p class="seg-mission"><b>Driving question:</b> How can an object influence another's motion without touching it? · <b>Mission:</b> shuttle-crew video log across a 365-day space journey.</p>
+
+    <div class="twrap"><table>
+      <thead><tr><th>Week</th><th>45-min days (M/Tu/F)</th><th>Block lab</th></tr></thead>
+      <tbody>
+        <tr><td class="wk">Oct 5</td><td><b>Gravitational Forces</b> — Gravity Visualized + APK · reading cluster C1–C3 + Qs · CER</td><td class="block">Gravity Pitch Gizmo</td></tr>
+        <tr><td class="wk">Oct 12</td><td><b>Solar System + Galaxies</b> — reading clusters + combined Qs · start Planet Travel Project</td><td class="block">Solar System Gizmo</td></tr>
+        <tr><td class="wk">Oct 19</td><td><b>Earth-Sun-Moon</b> — APK · reading cluster C1–C2</td><td class="block">Phases of the Moon Gizmo <span class="chip mini info">+ model</span></td></tr>
+        <tr><td class="wk">Oct 26</td><td>reading cluster C3 + Stemscopedia Qs · Quiz Study Guide · CER</td><td class="block">Eclipse + Summer/Winter Gizmos</td></tr>
+        <tr><td class="wk">Nov 2</td><td><b>Electric &amp; Magnetic</b> — reading cluster C1–C2 · Bill Nye Magnetism</td><td class="block">PhET Balloons &amp; Static</td></tr>
+        <tr><td class="wk">Nov 9 · Veterans</td><td>reading cluster C3 + analysis WS · segment wrap · Mission Log</td><td class="block">Magnetic Fields obs. <span class="chip mini warn">even periods: no Wed block — move lab</span></td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="scopes">
+      <div class="scope" style="--sc:var(--s2)"><div class="top"><h4>Gravitational Forces</h4><span class="pe">MS-PS2-4</span></div><div class="links"><a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1gIg3KhfRizRmoubJPXdy6xu2VLsvq2xmw4NYpzC1PY/edit">Reading cluster</a><a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1FcoCq7cUC78lk05Huh4hShj55lWPhQI9">Materials</a></div></div>
+      <div class="scope" style="--sc:var(--s2)"><div class="top"><h4>Formation of Galaxies</h4><span class="pe">MS-ESS1-2</span></div><div class="links"><a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1xcqqy1jdM2LFsRCqRplaAORrBmXUNsZX74SBEigXj5k/edit">Reading cluster</a><a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/12jWj5v4RdHcAkef_K2uKiV-2jlUaSfUt">Materials</a></div></div>
+      <div class="scope" style="--sc:var(--s2)"><div class="top"><h4>The Solar System</h4><span class="pe">MS-ESS1-2/3</span></div><div class="links"><a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1ODkrjB5l3FSObK0uDP6_cCKiNkWcdQAX3A-2GiKkDuI/edit">Reading cluster</a><a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/12jWj5v4RdHcAkef_K2uKiV-2jlUaSfUt">Materials</a></div></div>
+      <div class="scope" style="--sc:var(--s2)"><div class="top"><h4>Earth-Sun-Moon</h4><span class="pe">MS-ESS1-1</span></div><div class="links"><a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1W9CAfMtziOqNpQmuS44SeTZ9n-XFJ2yUNyeUDrMHu2g/edit">Reading cluster</a><a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1-8HPqEUTCaUAy63BXmQTbw__C0wRk8Bp">Materials</a></div></div>
+      <div class="scope" style="--sc:var(--s2)"><div class="top"><h4>Electric &amp; Magnetic Forces</h4><span class="pe">MS-PS2-3</span></div><div class="links"><a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1XndOX9AGjZf482oQoJWMxqsURQe3BRUTRk9yp11gIK0/edit">Reading cluster</a><a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1QyTxPgXSIC17MEnBFsYbmkRJpAqZNoZi">Materials</a></div></div>
+    </div>
+  </section>
+
+  <!-- SEGMENT 3 -->
+  <section id="seg3" style="--sc:var(--s3)">
+    <div class="seg-h"><span class="bar"></span><h2>Segment 3 · Evolution &amp; Heredity</h2></div>
+    <p class="seg-meta">Nov 16 – Feb 5 · MS-ESS1-4 · MS-LS4 · MS-LS3</p>
+    <p class="seg-mission"><b>Driving question:</b> How do Earth's history &amp; evidence of evolution show how species are similar and diverse? · <b>Mission:</b> invent organisms &amp; explain their evolution — running <b>Mystery Fossil</b> performance task.</p>
+
+    <div class="twrap"><table>
+      <thead><tr><th>Week</th><th>45-min days (M/Tu/F)</th><th>Block lab</th></tr></thead>
+      <tbody>
+        <tr><td class="wk">Nov 16</td><td><b>Geologic History</b> — Hook (mystery) · reading cluster C1–C3 + Qs <span class="chip mini warn">needs APK</span></td><td class="block">Index Fossils Lab (+ Layers of Time sim)</td></tr>
+        <tr class="off-row"><td class="wk">Nov 23</td><td colspan="2">Thanksgiving Break — no school</td></tr>
+        <tr><td class="wk">Nov 30</td><td><b>Fossil Record</b> — APK · reading cluster + Qs · <b>Fossil Record CER</b> · Mystery Fossil begins</td><td class="block">Digging Through the Past</td></tr>
+        <tr><td class="wk">Dec 7</td><td><b>Embryonic + Evolutionary History</b> — reading clusters C1–C3 · Picture Vocab · U3S3 CER</td><td class="block">Embryo card-sort explore</td></tr>
+        <tr><td class="wk">Dec 14 · Sem 1 ends</td><td>Evolutionary History reading + Qs · <b>mid-segment assessment / Mystery Fossil checkpoint</b></td><td class="block">Cladograms Gizmo + PBS tree-build</td></tr>
+        <tr class="off-row"><td class="wk">Dec 21 · 28</td><td colspan="2">Winter Break — no school</td></tr>
+        <tr><td class="wk">Jan 5</td><td><b>Natural Selection</b> — APK + Hook (javelina) · reading cluster C1–C2</td><td class="block">Rainfall &amp; Bird Beaks Gizmo</td></tr>
+        <tr><td class="wk">Jan 11</td><td>reading cluster C3 (math-ramp) + Qs · Galápagos Finch data · <b>Natural Selection CER</b></td><td class="block">Butterfly Lab</td></tr>
+        <tr><td class="wk">Jan 18 · MLK</td><td><b>Genes &amp; Proteins + Mutations</b> — Hook · reading clusters C1–C3</td><td class="block">Reebop Lab + Punnett practice</td></tr>
+        <tr><td class="wk">Jan 25</td><td>Mutations reading + Linking Literacy + Qs · <b>Genes &amp; Proteins CER</b></td><td class="block">Mouse Genetics Gizmos (1 &amp; 2 trait)</td></tr>
+        <tr><td class="wk">Feb 1</td><td><b>Artificial Selection</b> (short) — reading cluster + Qs · optional GMO debate</td><td class="block">— buffer / Mission Log</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="scopes">
+      <div class="scope" style="--sc:var(--s3)"><div class="top"><h4>Geologic History</h4><span class="pe">MS-ESS1-4</span></div><div class="links"><a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1IlMLrZhM2VViey8UN3vPvwWJUMavsCmgEDc5LpF95Go/edit">Reading cluster</a><a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1cgpXHD4ZlrARByYCzHCkHLdtbu3V1TH1">Materials</a></div></div>
+      <div class="scope" style="--sc:var(--s3)"><div class="top"><h4>Fossil Record</h4><span class="pe">MS-LS4-1</span></div><div class="links"><a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1ULgVv7Rer-1tlcpWhuy5Pqoj6o5mQ2IpVD-zSD-gkto/edit">Reading cluster</a><a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1mQ6fvT5CwFZmt52Y0GtWOnjCxMqR48Aj">Materials</a></div></div>
+      <div class="scope" style="--sc:var(--s3)"><div class="top"><h4>Embryonic Similarities</h4><span class="pe">MS-LS4-3</span></div><div class="links"><a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1iJfgyNw8SwM4D8gO16urwgO1Mni7e-SG6N1X5uRz-k8/edit">Reading cluster</a><a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1mQ6fvT5CwFZmt52Y0GtWOnjCxMqR48Aj">Materials</a></div></div>
+      <div class="scope" style="--sc:var(--s3)"><div class="top"><h4>Evolutionary History</h4><span class="pe">MS-LS4-2</span></div><div class="links"><a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1tZEco-e6yq6WY4t5apGYLnJL3fatvUp4vdtznRG7478/edit">Reading cluster</a><a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1mQ6fvT5CwFZmt52Y0GtWOnjCxMqR48Aj">Materials</a></div></div>
+      <div class="scope" style="--sc:var(--s3)"><div class="top"><h4>Natural Selection</h4><span class="pe">MS-LS4-4/6</span></div><div class="links"><a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1r6naUdXVGCcPP49uBSgBQa7epGdsFDaSpRZso5C23MY/edit">Reading cluster</a><a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1mQ6fvT5CwFZmt52Y0GtWOnjCxMqR48Aj">Materials</a></div></div>
+      <div class="scope" style="--sc:var(--s3)"><div class="top"><h4>Genes &amp; Proteins</h4><span class="pe">MS-LS3-1</span></div><div class="links"><a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/188Pxmb-1G1jbibSzmxIVAlKjKD5Snn6PePpswsNq4HE/edit">Reading cluster</a><a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1mQ6fvT5CwFZmt52Y0GtWOnjCxMqR48Aj">Materials</a></div></div>
+      <div class="scope" style="--sc:var(--s3)"><div class="top"><h4>Mutations</h4><span class="pe">MS-LS3-1</span></div><div class="links"><a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1vN8eiU_Xvwknbk7KTIvgYY06JYDMZivihLCOhuZaGBY/edit">Reading cluster</a><a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1mQ6fvT5CwFZmt52Y0GtWOnjCxMqR48Aj">Materials</a></div></div>
+      <div class="scope" style="--sc:var(--s3)"><div class="top"><h4>Artificial Selection</h4><span class="pe">MS-LS4-5</span></div><div class="links"><a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/12UpL5LYKWjNpWagGRxRcDJtA366vLum5cgO0EULzfWM/edit">Reading cluster</a><a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1mQ6fvT5CwFZmt52Y0GtWOnjCxMqR48Aj">Materials</a></div></div>
+    </div>
+  </section>
+
+  <!-- SEGMENT 4 -->
+  <section id="seg4" style="--sc:var(--s4)">
+    <div class="seg-h"><span class="bar"></span><h2>Segment 4 · Waves &amp; Sustaining Diversity</h2></div>
+    <p class="seg-meta">Feb 9 – Apr 9 · MS-PS4 · (Human Impact: MS-ESS3 · MS-ETS1 = EOY project) · Tier 4 independent</p>
+    <p class="seg-mission"><b>Driving question:</b> How can interpreting waves be used to measure biodiversity? · <b>Mission:</b> design a device to detect bat/dolphin species on an uninhabited island.</p>
+
+    <div class="twrap"><table>
+      <thead><tr><th>Week</th><th>45-min days (M/Tu/F)</th><th>Block lab</th></tr></thead>
+      <tbody>
+        <tr><td class="wk">Feb 8 · Lincoln</td><td><b>Properties of Waves</b> — reading cluster C1–C3 + Qs + Linking Lit · CER</td><td class="block">Waves Gizmo (+ Spring Waves)</td></tr>
+        <tr><td class="wk">Feb 15 · Wash.</td><td><b>Waves Through Mediums</b> — APK (shout across a canyon) · reading cluster C1–C2</td><td class="block">Visualizing Sound (+ spoons)</td></tr>
+        <tr><td class="wk">Feb 22</td><td>reading cluster C3 + Qs · CER / open-ended</td><td class="block">— buffer or extend</td></tr>
+        <tr><td class="wk">Mar 1</td><td><b>Visible Light</b> — reading cluster C1–C2 · Light Infographic</td><td class="block">PhET Bending Light</td></tr>
+        <tr><td class="wk">Mar 8</td><td>reading cluster C3 + Qs · <b>Light CER</b></td><td class="block">Refraction Gizmo</td></tr>
+        <tr><td class="wk">Mar 15</td><td><b>Digital vs Analog</b> — Linking Lit pre-read · reading cluster C1–C2</td><td class="block">Analog vs Digital Signals Lab</td></tr>
+        <tr class="off-row"><td class="wk">Mar 22 · 29</td><td colspan="2">Spring Break (Mar 19–29) — no school</td></tr>
+        <tr><td class="wk">Mar 30</td><td>reading cluster C3 + Qs · "Science Today!" (Pluto) · open-ended eval · Linking Lit post-read</td><td class="block">— buffer</td></tr>
+        <tr><td class="wk">Apr 5</td><td>Segment 4 wrap · Mission Log (bat/dolphin detector)</td><td class="block">—</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="scopes">
+      <div class="scope" style="--sc:var(--s4)"><div class="top"><h4>Properties of Waves</h4><span class="pe">MS-PS4-1</span></div><div class="links"><a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1alyZ40HxEg3-6jDoIvQlP3NRKfXFcD6kwEkr_eYsT7A/edit">Reading cluster</a><a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1tkyj3awAeW0Pg4HLIjoew3AVmDDp6cUp">Materials</a></div></div>
+      <div class="scope" style="--sc:var(--s4)"><div class="top"><h4>Waves Through Mediums</h4><span class="pe">MS-PS4-2</span></div><div class="links"><a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/15VrQ9Atd-jiSc_umUZqQChqhLJeL4yIERrbk1DhxAEw/edit">Reading cluster</a><a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1PgZLeALl07VBJAivWe8_3ZELbTTcKi_j">Materials</a></div></div>
+      <div class="scope" style="--sc:var(--s4)"><div class="top"><h4>Visible Light</h4><span class="pe">MS-PS4-2</span></div><div class="links"><a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1FhL6zs6ALMK-SZkoXWxlyagnkUf4BGDzRdExF4tVytY/edit">Reading cluster</a><a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1I32ynHgNBAH1x2DsUo5k_3brmc-3Z18T">Materials</a></div></div>
+      <div class="scope" style="--sc:var(--s4)"><div class="top"><h4>Digital vs Analog</h4><span class="pe">MS-PS4-3</span></div><div class="links"><a class="lk" target="_blank" rel="noopener" href="https://docs.google.com/document/d/13I1NTzbddhOw6gwcFOpLkv7weTd5Bua-U0qf7HDyXqY/edit">Reading cluster</a><a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1I32ynHgNBAH1x2DsUo5k_3brmc-3Z18T">Materials</a></div></div>
+      <div class="scope" style="--sc:var(--s4)"><div class="top"><h4>Human Impact <span class="chip mini info">EOY project</span></h4><span class="pe">MS-ESS3</span></div><div class="links"><a class="lk" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1D3lTuLLS54OEHQqkMJDsLmKdjT-DZ2xa">Project materials</a></div></div>
+    </div>
+  </section>
+
+  <!-- SPRING -->
+  <section id="spring">
+    <div class="seg-h" style="--sc:var(--warn)"><span class="bar"></span><h2>Spring · CAST prep, testing &amp; EOY</h2></div>
+    <p class="seg-meta">Apr 12 – Jun 4</p>
+
+    <div class="twrap"><table>
+      <thead><tr><th>Week</th><th>Focus</th></tr></thead>
+      <tbody>
+        <tr><td class="wk">Apr 12</td><td>CAST prep — Gist Jot method + Test-Taking Strategies · <b>Physical Science</b> review</td></tr>
+        <tr><td class="wk">Apr 19</td><td>CAST prep — <b>Life + Earth/Space</b> review, mixed CAST-style clusters</td></tr>
+        <tr><td class="wk">Apr 26</td><td>CAST prep — full practice + State Testing Goals · <b>Human Impact project introduced</b></td></tr>
+        <tr><td class="wk">May 3</td><td>Final CAST review / buffer</td></tr>
+        <tr><td class="wk">May 10 · 17</td><td><b>CAST testing window</b> <span class="chip crit mini">tentative mid-May</span></td></tr>
+        <tr><td class="wk">May 24</td><td>EOY — Human Impact project work</td></tr>
+        <tr><td class="wk">May 31 · Memorial</td><td>EOY — Human Impact + Future Roadmap presentations · year wrap (last day Jun 4)</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="callout">
+      <b>Open threads &amp; wrinkles</b>
+      <ul class="flags">
+        <li><b>CAST window is tentative</b> (mid-May) — confirm with your site; it shifts the spring.</li>
+        <li><b>Veterans Day (Wed Nov 11):</b> even-period classes lose that week's block — move the lab to a 45-min day.</li>
+        <li><b>Geologic History (Seg 3)</b> still needs an APK to match every other scope.</li>
+        <li><b>Human Impact</b> runs as the EOY project (its district 5E cells aren't built as a reading scope).</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Grade 8 Integrated Science · Clovis USD · 2026–27 · built from the year-long plan &amp; materials audit.</span>
+    <span>Reading cluster = Stemscopedia (New Testing). Links open in Drive.</span>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var root=document.documentElement, btn=document.getElementById('themeBtn'),
+        icon=document.getElementById('themeIcon'), label=document.getElementById('themeLabel');
+    function sysDark(){return window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;}
+    function current(){var t=root.getAttribute('data-theme');return t?t:(sysDark()?'dark':'light');}
+    function apply(t){root.setAttribute('data-theme',t);
+      icon.textContent=(t==='dark')?'☾':'☀';label.textContent=(t==='dark')?'Dark':'Light';
+      try{localStorage.setItem('yp-theme',t);}catch(e){}}
+    try{var saved=localStorage.getItem('yp-theme');if(saved)apply(saved);else apply(current());}
+    catch(e){apply(current());}
+    btn.addEventListener('click',function(){apply(current()==='dark'?'light':'dark');});
+  })();
+</script>
+</body>
+</html>
